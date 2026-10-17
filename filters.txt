@@ -1,0 +1,19 @@
+[Adblock Plus 2.0]
+! Title: monokaiyo filters
+! Description: Hide FapTap banners, affiliate promotions, and sponsored placements.
+! Version: 2026.10.17
+! Last modified: 2026-10-17T07:39:40Z
+! Expires: 7 days
+! Homepage: https://github.com/monokaiyo/uBlock-filter-lists
+!
+! FapTap：横幅广告
+faptap.net##.scroller-content a[href*="utm_medium=banner-ad"]:upward(4)
+! FapTap：联盟推广卡片
+faptap.net##a[data-ph-capture-attribute-affiliate]:upward(.grid > div)
+
+! FapTap：网格中的赞助卡片
+faptap.net##a[rel*="sponsored"]:upward(.grid > div)
+! FapTap：顶部推广区域
+faptap.net##a[rel*="sponsored"]:upward(.min-h-\[160px\])
+! FapTap：底部推广区域
+faptap.net##.grid > a[rel*="sponsored"]:upward(1)
